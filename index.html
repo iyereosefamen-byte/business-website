@@ -7,63 +7,75 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background: #f6f1ea;
     color: #333;
 }
 
 header {
-    background: #111;
+    background: #1a1a1a;
     color: white;
     text-align: center;
     padding: 60px 20px;
 }
 
 header h1 {
-    font-size: 3rem;
     margin: 0;
+    font-size: 40px;
 }
 
 header p {
-    font-size: 1.2rem;
+    opacity: 0.8;
 }
 
 section {
-    max-width: 1000px;
-    margin: auto;
     padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .products {
     display: flex;
     gap: 20px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 220px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.button {
-    display: inline-block;
-    background: #111;
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-}
-
-footer {
-    background: #111;
-    color: white;
+    width: 300px;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     text-align: center;
-    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sizes button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.shop {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #c2a77a;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
 }
 </style>
 </head>
@@ -73,44 +85,49 @@ footer {
 <header>
     <h1>SnugStep</h1>
     <p>Handcrafted Comfort. Timeless Style.</p>
-    <a href="#contact" class="button">Contact Us</a>
 </header>
-
-<section>
-    <h2>About SnugStep</h2>
-    <p>
-        SnugStep creates premium handmade footwear designed for comfort,
-        durability, and everyday luxury.
-    </p>
-</section>
 
 <section>
     <h2>Our Products</h2>
 
     <div class="products">
+
         <div class="card">
-            <h3>Birkenstock-Style Clogs</h3>
-            <img src="birken_clog_cropped.png" alt="Birken clogs" width="300">
-            <p>Comfortable everyday clogs with handcrafted quality.</p>
+            <img src="birken_clog_cropped.png">
+            <h3>Clogs</h3>
+
+            <div class="sizes">
+                <button onclick="selectSize(this)">37</button>
+                <button onclick="selectSize(this)">38</button>
+                <button onclick="selectSize(this)">39</button>
+            </div>
+
+            <button class="shop">Shop Now</button>
         </div>
 
         <div class="card">
-            <h3>Premium Sandals</h3>
-            <img src="premium_sandals_cropped.png" alt="Premium sandals" width="300">
-            <p>Stylish handmade sandals built for durability.</p>
+            <img src="premium_sandals_cropped.png">
+            <h3>Sandals</h3>
+
+            <div class="sizes">
+                <button onclick="selectSize(this)">37</button>
+                <button onclick="selectSize(this)">38</button>
+                <button onclick="selectSize(this)">39</button>
+            </div>
+
+            <button class="shop">Shop Now</button>
         </div>
+
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@snugstep.com</p>
-    <p>Phone: +234 XXX XXX XXXX</p>
-</section>
-
-<footer>
-    <p>© 2026 SnugStep. All rights reserved.</p>
-</footer>
+<script>
+function selectSize(btn) {
+    let siblings = btn.parentElement.querySelectorAll("button");
+    siblings.forEach(b => b.style.background = "white");
+    btn.style.background = "#c2a77a";
+}
+</script>
 
 </body>
-</html>f
+</html>
