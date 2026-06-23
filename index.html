@@ -3,131 +3,289 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SnugStep - Handmade Footwear</title>
+<title>SnugStep</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f6f1ea;
-    color: #333;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-    background: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+body{
+    font-family: Georgia, serif;
+    background:#f5efe6;
+    color:#2b2b2b;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
+nav{
+    background:#f0e7dc;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
 }
 
-header p {
-    opacity: 0.8;
+.logo{
+    font-size:28px;
+    font-weight:bold;
 }
 
-section {
-    padding: 40px 20px;
+.nav-links a{
+    text-decoration:none;
+    color:#2b2b2b;
+    margin-left:25px;
+    font-size:16px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.hero{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
 }
 
-.products {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
 }
 
-.card {
-    background: white;
-    width: 300px;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: center;
+.hero-content p{
+    font-size:20px;
+    max-width:600px;
+    margin:auto;
+    margin-bottom:30px;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.sizes button {
-    margin: 5px;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
+.btn{
+    padding:14px 28px;
+    border:none;
+    text-decoration:none;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-.shop {
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    background: #c2a77a;
-    color: white;
-    cursor: pointer;
-    border-radius: 8px;
+.btn-primary{
+    background:#2b2b2b;
+    color:white;
+}
+
+.btn-secondary{
+    background:#d9c6ad;
+    color:#2b2b2b;
+}
+
+.about{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.products{
+    padding:80px 10%;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.product-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:320px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.price{
+    margin:15px 0;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.shop-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#2b2b2b;
+    color:white;
+    padding:12px 24px;
+    border-radius:8px;
+}
+
+.contact{
+    padding:80px 10%;
+    text-align:center;
+}
+
+footer{
+    background:#e8ddd0;
+    padding:30px;
+    text-align:center;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:48px;
+}
+
+nav{
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-links a{
+    margin:0 10px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>SnugStep</h1>
-    <p>Handcrafted Comfort. Timeless Style.</p>
-</header>
+<nav>
+    <div class="logo">SNUGSTEP</div>
 
-<section>
-    <h2>Our Products</h2>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <div class="products">
+<section class="hero">
 
-        <div class="card">
-            <img src="birken_clog_cropped.png">
-            <h3>Clogs</h3>
+<div class="hero-content">
+    <h1>SNUGSTEP</h1>
 
-            <div class="sizes">
-                <button onclick="selectSize(this)">37</button>
-                <button onclick="selectSize(this)">38</button>
-                <button onclick="selectSize(this)">39</button>
-            </div>
+    <p>
+        Handcrafted Comfort. Timeless Style.
+    </p>
 
-            <button class="shop">Shop Now</button>
-        </div>
+    <div class="buttons">
 
-        <div class="card">
-            <img src="premium_sandals_cropped.png">
-            <h3>Sandals</h3>
+        <a class="btn btn-primary" href="#products">
+            Shop Now
+        </a>
 
-            <div class="sizes">
-                <button onclick="selectSize(this)">37</button>
-                <button onclick="selectSize(this)">38</button>
-                <button onclick="selectSize(this)">39</button>
-            </div>
-
-            <button class="shop">Shop Now</button>
-        </div>
+        <a class="btn btn-secondary"
+           href="https://wa.me/2348053664534">
+            Contact Us
+        </a>
 
     </div>
+</div>
+
 </section>
 
-<script>
-function selectSize(btn) {
-    let siblings = btn.parentElement.querySelectorAll("button");
-    siblings.forEach(b => b.style.background = "white");
-    btn.style.background = "#c2a77a";
-}
-</script>
+<section class="about">
+
+<h2>About Us</h2>
+
+<p>
+At SnugStep, we create premium handmade footwear
+designed for comfort, durability and effortless style.
+Every pair is crafted with care to help you step with confidence.
+</p>
+
+</section>
+
+<section class="products" id="products">
+
+<h2>Our Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+
+<img src="birken_clog_cropped.png" alt="Clogs">
+
+<div class="card-content">
+
+<h3>Birken-Style Clogs</h3>
+
+<div class="price">₦35,000</div>
+
+<a class="shop-btn"
+href="https://wa.me/2348053664534">
+Shop Now
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="premium_sandals_cropped.png" alt="Sandals">
+
+<div class="card-content">
+
+<h3>Premium Sandals</h3>
+
+<div class="price">₦30,000</div>
+
+<a class="shop-btn"
+href="https://wa.me/2348053664534">
+Shop Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<p>WhatsApp: 08053664534</p>
+<p>Email: snugstepfootwear@gmail.com</p>
+<p>Lagos, Nigeria</p>
+
+</section>
+
+<footer>
+    © 2026 SnugStep. All Rights Reserved.
+</footer>
 
 </body>
 </html>
