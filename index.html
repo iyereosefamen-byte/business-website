@@ -1,37 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SnugStep - Handmade Footwear</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SnugStep - Handmade Footwear</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button {
+    display: inline-block;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
+
 <body>
+
+<header>
     <h1>SnugStep</h1>
+    <p>Handcrafted Comfort. Timeless Style.</p>
+    <a href="#contact" class="button">Contact Us</a>
+</header>
 
-    <p>Handcrafted comfort. Timeless style.</p>
-
+<section>
     <h2>About SnugStep</h2>
     <p>
         SnugStep creates premium handmade footwear designed for comfort,
         durability, and everyday luxury.
     </p>
+</section>
 
+<section>
     <h2>Our Products</h2>
-    <ul>
-        <li>Birkenstock-Style Clogs</li>
-        <li>Premium Handmade Sandals</li>
-        <li>Luxury-Inspired Leather Slippers</li>
-        <li>Custom-Made Footwear</li>
-    </ul>
 
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>Handcrafted Quality</li>
-        <li>Comfortable Fit</li>
-        <li>Durable Materials</li>
-        <li>Elegant Designs</li>
-    </ul>
+    <div class="products">
+        <div class="card">
+            <h3>Birkenstock-Style Clogs</h3>
+            <p>Comfortable everyday clogs with handcrafted quality.</p>
+        </div>
 
+        <div class="card">
+            <h3>Premium Sandals</h3>
+            <p>Stylish handmade sandals built for durability.</p>
+        </div>
+
+        <div class="card">
+            <h3>Luxury-Inspired Slippers</h3>
+            <p>Elegant slippers designed for comfort and style.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Contact Us</h2>
     <p>Email: info@snugstep.com</p>
     <p>Phone: +234 XXX XXX XXXX</p>
+</section>
+
+<footer>
+    <p>© 2026 SnugStep. All rights reserved.</p>
+</footer>
+
 </body>
-</html>
+</html>f
